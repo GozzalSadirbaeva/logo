@@ -1,0 +1,161 @@
+@import "./reset";
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap');
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Play", sans-serif;
+    color: #001C1C;
+}
+
+:root {
+    --black: #001C1C;
+    --green: #248888;
+    --pink: #FF2E4C;
+    --white: #FFFFFF;
+    --dark-green: #023131;
+    --light-green: #F0F6F6;
+    --gray: #607282;
+    --dark-gray: #607282;
+}
+
+%center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%center-element-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%center-element-df {
+    display: flex;
+    align-items: center;
+}
+
+@mixin text__style($fs, $fw, $lh) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+// @extend %center-element-space;
+
+// @include text__style(16px, 400, 20.16px );
+.navbar {
+    @extend %center-element-space;
+    padding: 32px 0px 34px 0px ;
+}
+.items {
+    @extend %center-element-space;
+    gap: 47px;
+}
+.list {
+    @extend %center-element-space;
+    gap: 25px;
+    a {
+        @include text__style(18px, 400, 25px );
+        color: var(--black);
+    }
+}
+.icons {
+    @extend %center-element-space;
+}
+.btn{
+    padding: 14px 20px;
+    background-color: var(--pink);
+    border: none;
+    color: var(--white);
+    border-radius: 10px;
+    @include text__style(18px, 700, 25px );
+}
+.langu{
+    padding-right: 20px;
+    @include text__style(18px, 400, 25px );
+}
+.sale{
+    @include text__style(44px, 700, 50px );
+    color: var(--dark-green);
+}
+.left-side{
+    background-color: var(--light-green);
+    padding: 20px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.sale-num{
+    @include text__style(16px, 700, 22px );
+    color: var(--gray);
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+.card-text{
+    padding: 12px;
+}
+.card{
+    background-color: var(--white);
+    border: 1px solid #BEDADA;
+    border-radius: 10px;
+}
+.card-name{
+    font-family: "Montserrat", sans-serif;
+    @include text__style(14px, 500, 19px );
+    text-transform: uppercase;
+    color: var(--gray);
+    padding-top: 4px;
+}
+.card-title{
+    @include text__style(18px, 700, 23px );
+    padding-bottom: 40px;
+}
+.sale-name{
+    @include text__style(14px, 400, 19px );
+    color: var(--gray);
+}
+.sale-info{
+    @extend %center-element-space;
+}
+.sale-btn{
+    @include text__style(14px, 400, 19px );
+    color: var(--gray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+}
+.sale-btn-percent{
+    @include text__style(14px, 400, 19px );
+    color: var(--white);
+    background-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+}
+.market{
+    padding-top: 4px;
+}
+.cards{
+    display: grid;
+    gap: 20px;
+}
+.top-sale{
+    @include text__style(44px, 700, 50px );
+    color: #248888;
+}
+.main-div{
+    display: grid;
+    grid-column: 1;
+}
