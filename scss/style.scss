@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap');
 .container {
-    max-width: 1250px;
+    max-width: 1300px;
     margin: 0 auto;
     width: 100%;
 }
@@ -97,6 +97,7 @@ body {
     padding: 20px;
     grid-row-start: 1;
     grid-row-end: 3;
+    width: 250px;
 }
 .sale-num{
     @include text__style(16px, 700, 22px );
@@ -111,6 +112,8 @@ body {
     background-color: var(--white);
     border: 1px solid #BEDADA;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .card-name{
     font-family: "Montserrat", sans-serif;
@@ -122,6 +125,7 @@ body {
 .card-title{
     @include text__style(18px, 700, 23px );
     padding-bottom: 40px;
+    flex: 1;
 }
 .sale-name{
     @include text__style(14px, 400, 19px );
@@ -129,6 +133,7 @@ body {
 }
 .sale-info{
     @extend %center-element-space;
+    flex: 1;
 }
 .sale-btn{
     @include text__style(14px, 400, 19px );
@@ -154,8 +159,74 @@ body {
 .top-sale{
     @include text__style(44px, 700, 50px );
     color: #248888;
+    padding-bottom: 19px;
 }
 .main-div{
-    display: grid;
-    grid-column: 1;
+    display: flex;
+    gap: 40px;
+}
+.sale-menu{
+    @include text__style(20px, 400, 28px );
+    text-transform: uppercase;
+    color: #3C5858;
+}
+.menu-div{
+    display: flex;
+    gap: 40px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border-top: 1px solid #BEDADA;
+}
+.right-content{
+    background-color: var(--light-green);
+    padding: 30px;
+    border-radius: 10px;
+}
+.sale-cards{
+    display: flex;
+    gap: 20px;
+}
+.intro{
+    @include text__style(28px, 700, 32px );
+    padding-top: 70px;
+}
+.intro-text{
+    @include text__style(18px, 700, 27px );
+    padding-top: 16px;
+}
+.intro-extend{
+    @include text__style(17px, 400, 25px );
+    padding-top: 12px;
+    color: #607282;
+}
+.faq{
+    @include text__style(44px, 700, 50px );
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.faq-info{
+    @include text__style(20px, 400, 28px );
+    color: #3C5858;
+}
+.faq-content1{
+    @extend %center-element-space;
+    border-bottom: 1px solid #BEDADA;
+    padding-bottom: 25px;
+}
+.faq-con2{
+    padding-top: 25px;
+}
+@media only screen and (max-width: 600px){
+    .main-div{
+        display: block;
+    }
+    .sale-cards{
+        display: block;
+    }
+    .list{
+        visibility: hidden;
+    }
+    .socials{
+        visibility: hidden;
+    }
 }
